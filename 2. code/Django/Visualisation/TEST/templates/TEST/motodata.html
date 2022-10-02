@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motodata</title>
+</head>
+<body>
+<h1>register
+</h1>
+</body>
+</html>
+
+
+ <div class="container">
+        <h1 >Select the type of data you want to view:</h1>
+           {%csrf_token%}
+            <p>
+                <form class="form-login" action="/TEST/login/ method="post">
+                  <label for="type">Select the experiment data type to view:</label>
+                  <select name="datatype" id="type">
+                       <option value="motodata">moto data</option>
+                       <option value="fNIRsdata">fNIRS data(deoxy/oxy)</option>
+                       <option value="wl1wl2">wl1/wl2 data</option>
+                  </select>
+                  <input type="submit" value="Submit">
+                  <br><br>
+                </form>
+            </p>
+    </div>

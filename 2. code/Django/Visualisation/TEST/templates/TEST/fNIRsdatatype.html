@@ -1,0 +1,7 @@
+{% extends "TEST/fNIRsdata.html" %}
+
+{% block content %}
+{% for column in columns %}
+      <option value={{column}} >{{column}}</option>
+{% endfor %}
+{% endblock %}

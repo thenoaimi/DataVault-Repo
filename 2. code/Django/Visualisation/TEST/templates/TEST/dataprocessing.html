@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Data Type</title>
+            <link href="{% static 'TEST/css/login.css' %}" rel="stylesheet"/>
+      <style>
+h1 {text-align:center}
+h2 {text-align:left}
+h3 {text-align:right}
+</style>
+  </head>
+
+<body >
+
+ <div class="container">
+        <h1 >Which experiment would you like to view?</h1>
+            <p>
+                <form class="form-login" action="/TEST/" method="post">
+                 {%csrf_token%}
+                  <label for="type">Choose an experiment to view:</label>
+                  <select name="Experimentid" id="type">
+                       <option value="1">Experiment 1</option>
+                       <option value="2">Experiment 2</option>
+                  </select>
+                  <input type="submit" value="Submit">
+                  <br><br>
+                </form>
+            </p>
+    </div>
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.15.0/umd/popper.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

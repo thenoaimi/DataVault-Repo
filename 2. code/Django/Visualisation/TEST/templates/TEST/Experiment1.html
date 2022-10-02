@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="{% static 'TEST/css/login.css' %}" rel="stylesheet"/>
+    <title>Data Type</title>
+      <title>Experiment 1  </title>
+            <style>
+
+</style>
+  </head>
+
+<body >
+
+<div class="container">
+            <div class="col">
+              <form class="form-login" action="/TEST/experiment1/" method="post">
+                  {%csrf_token%}
+                  <h3 class="text-center">Experiment 1</h3>
+                  <div class="form-group">
+                    <label for="id_username">Enter the patient ID you wish to view (enter a value between 1 to 10)：</label>
+                    <input type="Text" name='patient_id' class="form-control" id="id_username" placeholder="Patient_id" autofocus required>
+                  </div>
+                <div>
+                    <label for="type" style="font-size:20px;" >Choose which test stimuli data to view：</label>
+                    <br>
+                   <select name="datatype" id="type" style="width:300px;height:30px">
+                       <option value="moto">moto</option>
+                       <option value="rest">rest</option>
+                       <option value="vimo">vimo</option>
+                       <option value="viso">viso</option>
+                  </select>
+                     <br>
+                     <br>
+                    <br>
+                     <form>
+                  <input type="radio" name="probetype" value="oxy" style=width:50px;height:50px>oxy<br>
+                  <input type="radio" name="probetype" value="deoxy" style=width:50px;height:50px>deoxy<br>
+                         <input type="radio" name="probetype" value="MES" style=width:50px;height:50px>MES<br>
+                     </form>
+                    <br>
+                    <input type="submit" value="Submit">
+                </div>
+              </form>
+            </div>
+    </div> <!-- /container -->
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.15.0/umd/popper.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

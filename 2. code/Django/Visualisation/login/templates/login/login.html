@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+    <div style="margin: 15% 40%;">
+        <h1>Login page for Group 14's Data Visualisations</h1>
+       <form action="/login/" method="post">
+           {% csrf_token %}
+            <p>
+                <label for="id_username">Username：</label>
+                           {% csrf_token %}
+                <input type="text" id="id_username" name="username" placeholder="Username" autofocus required />
+            </p>
+            <p>
+                <label for="id_password">Password：</label>
+                           {% csrf_token %}
+                <input type="password" id="id_password" placeholder="Password" name="password" required >
+            </p>
+                      {% csrf_token %}
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+</body>
+</html>
